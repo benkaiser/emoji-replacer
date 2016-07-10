@@ -7,7 +7,7 @@
 
   "content_scripts": [
     {
-      "matches": ["https://www.messenger.com"],
+      "matches": ["https://www.messenger.com/*"],
       "js": ["bower_components/jquery/dist/jquery.slim.min.js", "emoji_bindings.js", "emoji.js"]
     }
   ],
