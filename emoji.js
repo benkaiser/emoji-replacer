@@ -34,7 +34,6 @@ function getSelectionOffset() {
   return null;
 }
 
-
 // handlers
 $('body').on('input', 'input', function () {
   var input = $(this).val();
@@ -53,7 +52,6 @@ $('*').on('input', '[contenteditable]', function () {
   // work out the selection offset, so we only replace text bofore that
   var selection = getSelectionOffset();
   var beforeSelection = Math.max(0, getSelectionOffset() - 1);
-  console.log(beforeSelection);
 
   // process the text nodes one by one, modifying their contents
   textNodes.forEach(function (textNode) {
@@ -74,15 +72,22 @@ $('*').on('input', '[contenteditable]', function () {
 
 // actual text -> emoji processing function
 function processChanges(value) {
-  console.log('Old Value: ' + value);
+  var oldvalue = value;
 
   lookupKeys.forEach(function (lookupVal) {
-    if (value.indexOf(lookupVal) > -1) {
+    var firstIndex = value.indexOf(lookupVal);
+    if (firstIndex > -1 &&
+          (firstIndex == 0 ||
+           value[firstIndex - 1] == ' ') &&
+        value[firstIndex + lookupVal.length] == ' ') {
       value = value.replace(lookupVal, lookup[lookupVal]);
     }
   });
 
-  console.log('New Value: ' + value);
+  if (oldvalue !== value) {
+    console.log('Old Value: ' + value);
+    console.log('New Value: ' + value);
+  }
 
   return value;
 }

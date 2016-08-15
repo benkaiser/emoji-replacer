@@ -1,0 +1,5 @@
+#!/bin/bash
+
+npm install
+bower install
+sed '1s;^;var emojis = ;' bower_components/emojilib/emojis.json > bower_components/emojilib/emojis.json.js

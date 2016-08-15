@@ -1,0 +1,21 @@
+{
+  "name": "emoji-replacer",
+  "version": "0.1.0",
+  "description": "Automatically replaces text you are currently writing with Emoji!",
+  "main": "emoji.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benkaiser/emoji-replacer.git"
+  },
+  "author": "Benjamin Kaiser",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benkaiser/emoji-replacer/issues"
+  },
+  "dependencies": {
+    "grunt-cli": "^1.2.0"
+  },
+  "jscsConfig": {
+    "disallowQuotedKeysInObjects": false
+  }
+}

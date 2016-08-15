@@ -4,11 +4,15 @@
   "name": "Emoji Replacer",
   "description": "Automatically replaces text you are currently writing with Emoji!",
   "version": "0.1",
-
   "content_scripts": [
     {
       "matches": ["https://www.messenger.com/*"],
-      "js": ["bower_components/jquery/dist/jquery.slim.min.js", "emoji_bindings.js", "emoji.js"]
+      "js": [
+        "bower_components/jquery/dist/jquery.slim.min.js",
+        "bower_components/emojilib/emojis.json.js",
+        "emoji_bindings.js",
+        "emoji.js"
+      ]
     }
   ],
   "permissions": [

@@ -10,7 +10,8 @@ with text inputs.
 
 #### Installing
 
-1. download the repository
+1. Download the repository
+1. Run `./bin/setup` from the project directory
 1. Open `chrome://extensions` in Chrome
 1. Select 'Load unpacked extension...'
 1. Pick the folder where you downloaded the repository to
